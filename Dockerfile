@@ -1,6 +1,6 @@
 FROM alpine
 
-ONBUILD RUN apk update
-ONBUILD RUN apk add gcc make cmake gtest
-ONBUILD WORKDIR /home/build
+RUN apk update && apk add build-base make cmake gtest-dev
+
+WORKDIR /home/build
 
